@@ -1,0 +1,65 @@
+<div class="flex justify-center items-center h-screen bg-secondary">
+  <div class="w-full max-w-md">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h2 class="text-2xl mb-6 font-bold text-secondary-content text-center">
+        Register
+      </h2>
+      <h3
+        ngClass="{{ cautionClass }}"
+        class="text-xl mb-6 font-bold text-center"
+      >
+        {{ caution }}
+      </h3>
+      <div class="mb-4">
+        <div class="form-control w-full max-w-sm">
+          <input
+            name="username"
+            [(ngModel)]="username"
+            placeholder="Username"
+            type="text"
+            class="input input-info input-bordered w-full max-w-sm"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-4">
+        <input
+          placeholder="Password"
+          class="input input-bordered input-info w-full max-w-sm"
+          id="username"
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <input
+          placeholder="Confirm Password"
+          class="input input-bordered input-info w-full max-w-sm"
+          id="confirm-password"
+          type="password"
+          [(ngModel)]="confirmPassword"
+          name="confirm-password"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <input
+          class="input input-bordered input-info w-full max-w-sm"
+          id="email"
+          type="email"
+          placeholder="Email"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="flex items-center justify-center">
+        <button class="btn btn-info" type="submit" (click)="onSubmit()">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
